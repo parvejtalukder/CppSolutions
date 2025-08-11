@@ -4,12 +4,14 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(0);
     int n;
-    while (cin >> n) {
-        if (n == 0) {
-            cout << "vai ter copa!\n";
+    cin >> n;
+    for (int i = 1; i <= n; i++) {
+        if (i == n) {
+            cout << "Ho!";
         } else {
-            cout << "vai ter duas!\n";
+            cout << "Ho ";
         }
     }
+    cout << endl;
     return 0;
 }
