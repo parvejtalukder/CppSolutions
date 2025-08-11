@@ -1,10 +1,12 @@
-#include <vector>
 #include <bits/stdc++.h>
 using namespace std;
 
 int main() {
-    cout << "Enter 0 to exit code\n" << endl;
-    vector <int> listofnum;
-    // 
+    ios_base::sync_with_stdio;
+    cin.tie(0);
+    unsigned int a, b;
+    while (cin >> a >> b) { 
+        cout << (a ^ b) << "\n"; 
+    }
     return 0;
 }
