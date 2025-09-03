@@ -8,10 +8,26 @@ int main() {
     name.push_back('v');    
     name.push_back('e');    
     name.push_back('j');
+    name.push_front(' ');
+    name.push_front('d');
+    name.push_front('M');
     // list <char>::iterator printer;
     // for(printer = name.begin(); printer != name.end(); printer++) {
     //     cout << *printer;
     // }
+    for(auto it: name) {
+        cout << it;
+    }
+    cout << endl;
+    // cout << name.front() << endl;
+    // cout << name.back() << endl;
+    cout << "The Size of List: " << name.size() << endl;
+    name.clear();
+    cout << "Cleared" << endl;
+    (name.empty()) ? cout << "Nothing have" : cout << "Have value"; 
+    cout << endl;
+    name.insert(name.begin(), 'P');
+    // cout << name.begin() << endl;
     for(auto it: name) {
         cout << it;
     }
