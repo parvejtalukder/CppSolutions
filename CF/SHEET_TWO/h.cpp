@@ -27,6 +27,7 @@ int main() {
     pht();
     Sive();
     int number;
+    cin >> number;
     if (Primes[number] == 1) {
         cout << "YES" << endl;
     } else {
