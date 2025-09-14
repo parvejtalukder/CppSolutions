@@ -12,7 +12,7 @@ int main() {
     pht();
     int a, b;
     cin >> a >> b;
-    double res = (double)b / (double)a;
-    cout << 100 - (res * b) << endl;
+    double res = ((double)b / (double)a) * 100;
+    cout << 100 - res << endl;
     return 0;
 }
