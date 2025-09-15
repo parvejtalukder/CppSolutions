@@ -3,13 +3,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-long long int nums;
-vector <long long int> num;
-
-void twpPowNum() {
-    
-}
-
 void pht() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
@@ -18,11 +11,17 @@ void pht() {
 
 int main() {
     pht();
-    int n; cin >> n;
-    int sum = 0; 
-    for(int i = 1; i <= n; i++) {
-        
+    int testCase; 
+    cin >> testCase;
+    while(testCase--) {
+        int n; cin >> n;
+        long long int sum = (long long int) (n + 1) * n / 2;
+        long long int theSum = 0;
+        for(int i = 1; i <= n; i*=2) {
+            theSum += i;
+        }
+        long long int ans = sum - theSum * 2;
+        cout << ans << endl;
     }
-    cout << sum << endl;
     return 0;
 }
