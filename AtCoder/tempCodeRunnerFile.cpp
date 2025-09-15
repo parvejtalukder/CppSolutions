@@ -1,44 +1,45 @@
-
-/*https://atcoder.jp/contests/abc051/tasks/abc051_b*/
+/*https://vjudge.net/problem/codeforces-271a*/
 #include <bits/stdc++.h>
 using namespace std;
 
-inline void pht() {
-    ios_base::sync_with_stdio(false);
-    cin.tie(nullptr);
-    cout.tie(nullptr);
+void pht() {
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
 }
 
-int sumOFD(int n) {
-    int sum = 0, digit;
-    while (n > 0) {
-        digit = n % 10;
-        sum += digit;
-        n = n / 10;
+bool fourSlice(int nums) {
+    int arr[4];
+    // int a, b, c, d;
+    int numOfNums, cnt = 0;
+    while(nums > 0) {
+        numOfNums = nums % 10;
+        arr[cnt] = numOfNums;
+        nums /= 10;
+        cnt++;
     }
-    return sum;
+    if (
+        arr[0] != arr[1] &&
+    arr[0] != arr[2] &&
+    arr[0] != arr[3] &&
+    arr[1] != arr[2] &&
+    arr[1] != arr[3] &&
+    arr[2] != arr[3]
+    ) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 int main() {
     pht();
-    // long long int n; cin >> n;
-    char s[1000005]; 
-    int ans = 0;
-    cin >> s; int digitsum = 0; 
-    int len = strlen(s);
-    if (len == 1) {
-        cout << 0 << endl;
-        return 0;
+    int year; cin >> year;
+    for(int i = year;; i++) {
+        if (fourSlice(i)) {
+            cout << i << endl;
+            break;
+        }
     }
-    for(int i = 0; i < len; i++) {
-        digitsum += s[i] - '0';
-    }
-    ans++; int n = digitsum; 
-    while(n > 9) {
-        // cout << n << endl;
-        n = sumOFD(n);
-        ans++;
-    }
-    cout << ans << endl;
     return 0;
 }
