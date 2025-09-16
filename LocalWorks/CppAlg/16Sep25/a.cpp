@@ -1,4 +1,6 @@
 #include <bits/stdc++.h>
+#include "head.h"
+
 using namespace std;
 
 void pht() {
@@ -9,6 +11,8 @@ void pht() {
 
 int main() {
     pht();
-    
+    cout << sum(5, 7) << endl;
+    cout << mul(5, 7) << endl;
+    // cout << div(5, 7) << endl;
     return 0;
 }
