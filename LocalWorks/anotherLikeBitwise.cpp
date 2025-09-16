@@ -28,10 +28,19 @@ int unSetKthBit(int x, int k) {
     return x & (~(1 << k));
 }
 
+int changeBit(int x, int k) {
+    return x ^ (1 << k);
+}
+
+int isPowerOfTwo(int x) {
+    
+}
+
 int main() {
     pht();
     int x = 11;
     // cout << setKthBit(11, 2) << endl;
-    cout << unSetKthBit(15, 2) << endl;
+    // cout << unSetKthBit(15, 2) << endl;
+    // cout << changeBit(x, 2) << endl;
     return 0;
 }
