@@ -8,7 +8,8 @@ int main() {
         cin >> arr[i];
     } 
     for(int i = 0; i < n; i++) {
-        cout << arr[i] << endl; 
+        cout << arr[i] << endl;  
     }
+    // ING CHANGE
     return 0;
 }
