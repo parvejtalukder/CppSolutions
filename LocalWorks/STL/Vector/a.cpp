@@ -39,7 +39,11 @@ int main() {
         cout << vec << endl;
     }
 
-    
+    charVec.clear();
+
+    if (charVec.empty()) {
+        cout << "EMPTY" << endl;
+    }
 
     return 0;
 }
