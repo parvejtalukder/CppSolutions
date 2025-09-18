@@ -2,8 +2,6 @@
 using namespace std;
 
 int main() {
-    vector <int> myVec;
-    // myVec.capacity();
     char myName[40];
     cin.getline(myName, 40);
     int size = strlen(myName);
