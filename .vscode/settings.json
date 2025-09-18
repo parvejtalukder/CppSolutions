@@ -38,7 +38,7 @@
     "/w14928"
   ],
   "C_Cpp_Runner.enableWarnings": true,
-  "C_Cpp_Runner.warningsAsError": false,
+  "C_Cpp_Runner.warningsAsError": true,
   "C_Cpp_Runner.compilerArgs": [],
   "C_Cpp_Runner.linkerArgs": [],
   "C_Cpp_Runner.includePaths": [],
@@ -57,10 +57,11 @@
   "C_Cpp_Runner.useAddressSanitizer": false,
   "C_Cpp_Runner.useUndefinedSanitizer": false,
   "C_Cpp_Runner.useLeakSanitizer": false,
-  "C_Cpp_Runner.showCompilationTime": false,
+  "C_Cpp_Runner.showCompilationTime": true,
   "C_Cpp_Runner.useLinkTimeOptimization": false,
   "C_Cpp_Runner.msvcSecureNoWarnings": false,
-  "editor.inlineSuggest.edits.showCollapsed": true,
+  "editor.inlineSuggest.edits.showCollapsed": false,
   "editor.inlineSuggest.experimental.showOnSuggestConflict": "always",
+  "editor.inlineSuggest.enabled": false,
   "editor.inlineSuggest.suppressSuggestions": true
 }
