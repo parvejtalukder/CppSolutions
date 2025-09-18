@@ -3,6 +3,7 @@
     "*.embeddedhtml": "html",
     "iostream": "cpp"
   },
+
   "C_Cpp_Runner.cCompilerPath": "gcc",
   "C_Cpp_Runner.cppCompilerPath": "g++",
   "C_Cpp_Runner.debuggerPath": "gdb",
@@ -10,6 +11,7 @@
   "C_Cpp_Runner.cppStandard": "",
   "C_Cpp_Runner.msvcBatchPath": "",
   "C_Cpp_Runner.useMsvc": false,
+
   "C_Cpp_Runner.warnings": [
     "-Wall",
     "-Wextra",
@@ -21,6 +23,7 @@
     "-Wsign-conversion",
     "-Wnull-dereference"
   ],
+
   "C_Cpp_Runner.msvcWarnings": [
     "/W4",
     "/permissive-",
@@ -37,15 +40,18 @@
     "/w44265",
     "/w14928"
   ],
+
   "C_Cpp_Runner.enableWarnings": true,
   "C_Cpp_Runner.warningsAsError": true,
   "C_Cpp_Runner.compilerArgs": [],
   "C_Cpp_Runner.linkerArgs": [],
   "C_Cpp_Runner.includePaths": [],
+
   "C_Cpp_Runner.includeSearch": [
     "*",
     "**/*"
   ],
+
   "C_Cpp_Runner.excludeSearch": [
     "**/build",
     "**/build/**",
@@ -54,14 +60,28 @@
     "**/.vscode",
     "**/.vscode/**"
   ],
+
   "C_Cpp_Runner.useAddressSanitizer": false,
   "C_Cpp_Runner.useUndefinedSanitizer": false,
   "C_Cpp_Runner.useLeakSanitizer": false,
   "C_Cpp_Runner.showCompilationTime": true,
   "C_Cpp_Runner.useLinkTimeOptimization": false,
   "C_Cpp_Runner.msvcSecureNoWarnings": false,
+
+  /* ───── Editor suggestions ───── */
+  "editor.inlineSuggest.enabled": false,              // ghost text বন্ধ
+  "editor.inlineSuggest.suppressSuggestions": true,
   "editor.inlineSuggest.edits.showCollapsed": false,
-  "editor.inlineSuggest.experimental.showOnSuggestConflict": "always",
-  "editor.inlineSuggest.enabled": false,
-  "editor.inlineSuggest.suppressSuggestions": true
+
+  // keyword / IntelliSense dropdown চালু
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": false
+  },
+  "editor.suggest.showKeywords": true,
+  "editor.suggest.showSnippets": true,
+  "editor.suggest.showVariables": true,
+  "editor.suggestOnTriggerCharacters": true,
+  "editor.quickSuggestionsDelay": 0
 }
