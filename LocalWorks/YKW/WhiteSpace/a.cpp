@@ -2,9 +2,9 @@
 using namespace std;
 
 int main() {
-    char myName[40];
-    cin.getline(myName, 40);
-    int size = strlen(myName);
+    string myName;
+    cin >> myName;
+    int size = myName.size();
     cout << myName << "\t" << endl << size << endl;
     int charSize;
     charSize = size;
