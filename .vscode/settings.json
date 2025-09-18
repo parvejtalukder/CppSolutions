@@ -130,7 +130,7 @@
 
   "C_Cpp_Runner.enableWarnings": true,
   "C_Cpp_Runner.warningsAsError": false,
-  "C_Cpp_Runner.compilerArgs": [],
+  // "C_Cpp_Runner.compilerArgs": [],
   "C_Cpp_Runner.linkerArgs": [],
   "C_Cpp_Runner.includePaths": [],
 
@@ -138,6 +138,10 @@
     "*",
     "**/*"
   ],
+
+  // ...existing code...
+"C_Cpp_Runner.compilerArgs": ["-Wno-unused-result"],
+// ...existing code...
 
   "C_Cpp_Runner.excludeSearch": [
     "**/build",
@@ -154,6 +158,7 @@
   "C_Cpp_Runner.showCompilationTime": true,
   "C_Cpp_Runner.useLinkTimeOptimization": false,
   "C_Cpp_Runner.msvcSecureNoWarnings": false,
+  
 
   /* ───── Editor suggestions ───── */
   "editor.inlineSuggest.enabled": false,              // ghost text বন্ধ
@@ -171,4 +176,5 @@
   "editor.suggest.showVariables": true,
   "editor.suggestOnTriggerCharacters": true,
   "editor.quickSuggestionsDelay": 0
+  
 }
