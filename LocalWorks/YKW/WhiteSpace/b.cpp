@@ -2,8 +2,10 @@
 using namespace std;
 
 int main() {
-    int n = 500;
-    cout << log2(n) << endl;
-    
+    int a = 0;
+    for(int i = 1; i <= 1000000; i++) {
+        a+=i;
+    }
+    cout << a << endl;
     return 0;
 }
