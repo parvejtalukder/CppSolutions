@@ -17,11 +17,14 @@ int main() {
         cin >> arrOfSize[i];
     }
     for(int o = 0; o < arrSize - 1; o++) {
+        bool isSwaped = false; // Falgging Added Here 
         for(int i = 0; i < arrSize - o - 1; i++) {
             if (arrOfSize[i] > arrOfSize[i + 1]) {
                 swap(arrOfSize[i], arrOfSize[i + 1]);
+                isSwaped = true;
             }
         }
+        if (!isSwaped) break;
     }
     for(int i = 0; i < arrSize; i++) {
         if (i != arrSize - 1) {
