@@ -16,8 +16,8 @@ int main() {
     char numOf[sizeOf + 1];
     cin.getline(numOf, sizeOf + 1);
     int theSum = 0;
-    for(int i: numOf) {
-        theSum += i - '0';
+    for(int i = 0; i < sizeOf; i++) {
+        theSum += numOf[i] - '0';
     }
     cout << theSum << endl;
     // cout << nums << endl;
