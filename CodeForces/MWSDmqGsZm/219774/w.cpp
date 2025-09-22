@@ -19,7 +19,7 @@ int main() {
         }
     }
 
-    for(int i = rowIs - 1; i >= 0; i--) {
+    for(int i = 0; i < rowIs; i++) {
         for(int j = colmIs - 1; j >= 0; j--) {
             if (j != 0) {
                 cout << arr2d[i][j] << " ";
@@ -28,6 +28,5 @@ int main() {
             }
         }
     }
-    cout << endl;
     return 0;
 }
