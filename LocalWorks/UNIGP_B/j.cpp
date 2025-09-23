@@ -9,5 +9,29 @@ void pht() {
 
 int main() {
     pht();
-    int 
+    int row, colm;
+    cin >> row >> colm;
+    int evn = 0;  
+    for (int i = 1; i <= row; i++) {
+        if (i % 2 == 0) evn++;  
+        for (int j = 1; j <= colm; j++) {
+            if (i % 2 == 0) {
+                if (evn % 2 == 1) { 
+                    if (j != colm)
+                        cout << ".";
+                    else
+                        cout << "#";
+                } else {            
+                    if (j != 1)
+                        cout << ".";
+                    else
+                        cout << "#";
+                }
+            } else {
+                cout << "#"; 
+            }
+        }
+        cout << '\n';
+    }
+    return 0;
 }

@@ -7,36 +7,33 @@ void pht() {
     cout.tie(nullptr);
 }
 
-bool isSameAs47(int x) {
-    int nn = x;
-    if (nn == 0) {
-        return false;
-    } else if (nn == 4 || nn == 7) {
-        return true;
-    } else {
-        while(x > 0) {
-        int dig = x % 10;
-        if (dig != 4 && dig != 7) return false;
-        x/=10;
-    }
-    }
-    return true;
-}
-
 int main() {
     pht();
-    string numString;
-    cin >> numString;
-    int coutingChar = 0;
-    for(int i = 0; i < numString.size(); i++) {
-        if (numString[i] == '4' && numString[i] == '7') {
-            coutingChar++;
+    int row, colm;
+    cin >> row >> colm;
+    int evn = 0;
+    for(int i = 1; i <= row; i++) {
+        for(int j = 1; j <= colm; j++) {
+            if (i % 2 == 0) {
+                evn++;
+                if (evn % 2 != 0) {
+                    if (j != colm) {
+                        cout << ".";
+                    } else {
+                        cout << "#";
+                    }
+                } else {
+                    if (j != 1) {
+                        cout << ".";
+                    } else {
+                        cout << "#";
+                    }
+                }
+            } else {
+                cout << "#";
+            }
         }
-    }
-    if (isSameAs47(coutingChar) == true) {
-        cout << "YES" << endl;
-    } else {
-        cout << "NO" << endl;
+        cout << endl;
     }
     return 0;
 }
