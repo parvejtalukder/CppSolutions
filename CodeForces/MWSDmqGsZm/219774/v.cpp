@@ -10,6 +10,6 @@ void pht() {
 
 int main() {
     pht();
-
+    
     return 0;
 }
