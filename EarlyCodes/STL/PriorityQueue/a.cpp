@@ -2,7 +2,7 @@
 using namespace std;
 int main() {
     // priority_queue <int> pQ;
-    priority_queue <int, vector<int>, greater <int>> pQ;
+    priority_queue <int> pQ;
     pQ.push(343);
     pQ.push(43);
     pQ.push(34);

@@ -11,5 +11,10 @@ void pht() {
 
 int main() {
     pht();
+    string one, two;
+    cin >> one;
+    cin >> two;
+    cout << one.size() << " " << two.size() << endl;
+    cout << one << " " << two << endl;
     return 0;
 }
