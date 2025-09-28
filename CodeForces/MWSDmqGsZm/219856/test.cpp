@@ -10,14 +10,7 @@ void pht() {
 
 int main() {
     pht();
-    string Word;
-    cin >> Word;
-    string Poor = Word;
-    reverse(Word.begin(), Word.end());
-    if (Poor == Word) {
-        cout << "YES" << endl;
-    } else {
-        cout << "NO" << endl;
-    }
+    string myString = "Parvej";
+    cout << (myString.find("vej") != string::npos) << endl;
     return 0; 
 }

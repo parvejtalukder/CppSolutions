@@ -10,6 +10,16 @@ void pht() {
 
 int main() {
     pht();
-    
+    int testCase;
+    cin >> testCase;
+    while(testCase--) {
+        string stringOfNums;
+        cin >> stringOfNums;
+        if (stringOfNums.find("101") != string::npos || stringOfNums.find("010") != string::npos){
+            cout << "Good" << endl;
+        } else {
+            cout << "Bad" << endl;
+        }
+    }
     return 0; 
 }
