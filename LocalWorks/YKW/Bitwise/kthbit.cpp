@@ -10,11 +10,16 @@ void pht() {
 
 int checkKthBit(int x, int k) {
     return (x >> k) & 1;
+} 
+
+int setKthBit (int x, int k) {
+    return k | (1 << k);
 }
 
 int main() {
     pht();
     int x = 11;
-    cout << checkKthBit(x, 3) << endl;
+    // cout << checkKthBit(x, 2) << endl;
+    cout << checkKthBit(x, 2) << endl;
     return 0;
 }
