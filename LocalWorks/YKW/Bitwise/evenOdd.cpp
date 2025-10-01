@@ -8,18 +8,18 @@ void pht() {
     cout.tie(0);
 }
 
-// int checkKthBit(int x, int k) {
-//     return (x >> k) & 1;
-// }
+int checkKthBit(int x, int k) {
+    return (x >> k) & 1;
+}
 
-// int isEven(int n) {
-//     if(checkKthBit(n, 0)) {
-//         return 0;
-//     } else {
-//         return 1;
-//     }
-// }
-//
+int isEven(int n) {
+    if(checkKthBit(n, 0)) {
+        return 0;
+    } else {
+        return 1;
+    }
+}
+
 
 int setKthBit(int x, int k) {
     return x | (1 << k);
