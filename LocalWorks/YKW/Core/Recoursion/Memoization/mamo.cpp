@@ -1,9 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-vector <int> mamo;
+vector <long long> mamo;
 
-int f(int n) {
+long long f(int n) {
     if (n == 0) {
         return 0;
     } else if (n == 1) {
@@ -17,7 +17,7 @@ int f(int n) {
 }
 
 int main() {
-    int n = 5;
+    int n = 50;
     mamo.assign(n+1, -1);
     cout << f(n) << endl;
     return 0;
