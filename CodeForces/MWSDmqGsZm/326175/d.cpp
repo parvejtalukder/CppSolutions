@@ -11,5 +11,22 @@ void pht() {
 
 int main() {
     pht();
+    long long a, b, c, d;
+    cin >> a >> b >> c >> d;
+    if (a + b - c == d) {
+        cout << "YES" << endl;
+    } else if (a + (b * c) == d) {
+        cout << "YES" << endl;
+    } else if ((a * b) - c == d) {
+        cout << "YES" << endl;
+    } else if (a - b + c == d) {
+        cout << "YES" << endl;
+    } else if (a - (b * c) == d) {
+        cout << "YES" << endl;
+    } else if ((a * b) + c == d) {
+        cout << "YES" << endl;
+    } else {
+        cout << "NO" << endl;
+    }
     return 0;
 }
