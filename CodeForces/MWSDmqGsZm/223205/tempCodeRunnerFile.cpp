@@ -1,7 +1,10 @@
-// https://codeforces.com/group/MWSDmqGsZm/contest/223205/problem/C
+// https://codeforces.com/group/MWSDmqGsZm/contest/223205/problem/E
  
 #include <bits/stdc++.h>
 using namespace std;
+
+long long getPower(int b, int p);
+void toSolve(int x, int n);
  
 void pht() {
     ios::sync_with_stdio(0);
@@ -9,27 +12,30 @@ void pht() {
     cout.tie(0);
 }
  
-void toBinAndCheckPalin(long long num) {
-    string binNum;
-    while(num > 0) {
-        int bit = num % 2;
-        binNum = to_string(bit) + binNum;
-        num /= 2;
-    }
-    // return binNum;
-    string poorBin = binNum;
-    reverse(binNum.begin(), binNum.end());
-    if (binNum == poorBin && num % 2 == 0) {
-        cout << "YES" << endl;
-    } else {
-        cout << "NO" << endl;
-    }
-}
- 
 int main() {
     pht();
-    long long decimel;
-    cin >> decimel;
-    toBinAndCheckPalin(decimel);
+    int N, X;
+    cin >> X >> N;
+    toSolve(X, N);
     return 0;
+}
+
+void toSolve(int x, int n) {
+    long long Sum = 0;
+    // long long Mult = 1;
+    for(int i = 2; i <= n; i += 2) {
+        Sum += getPower(x, i);
+    }
+    cout << Sum << endl;
+}
+
+long long getPower(int b, int p) {
+    if (p == 0) {
+        return 0;
+    } else if (p == 1) {
+        return b;
+    } else {
+        p -= 1;
+        return (long long)b * getPower(b, p);
+    }
 }

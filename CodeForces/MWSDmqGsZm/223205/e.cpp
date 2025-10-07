@@ -3,7 +3,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int getPower(int b, int p);
+long long getPower(int b, int p);
 void toSolve(int x, int n);
  
 void pht() {
@@ -29,13 +29,13 @@ void toSolve(int x, int n) {
     cout << Sum << endl;
 }
 
-int getPower(int b, int p) {
+long long getPower(int b, int p) {
     if (p == 0) {
         return 0;
     } else if (p == 1) {
         return b;
     } else {
         p -= 1;
-        return b * getPower(b, p);
+        return (long long)b * getPower(b, p);
     }
 }
