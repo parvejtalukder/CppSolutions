@@ -37,4 +37,5 @@ int main() {
     cin >> decimel;
     toBinAndCheckPalin(decimel);
     return 0;
-}
+} 
+// pht
