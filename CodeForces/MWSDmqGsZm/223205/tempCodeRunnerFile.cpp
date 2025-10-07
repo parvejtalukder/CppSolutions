@@ -11,20 +11,15 @@ void pht() {
  
 void toBinAndCheckPalin(long long num) {
     string binNum;
-    if (num % 2 != 0) {
-        while(num > 0) {
+    while(num > 0) {
         int bit = num % 2;
         binNum = to_string(bit) + binNum;
         num /= 2;
     }
     // return binNum;
-    } else {
-        cout << "NO" << endl;
-        return;
-    }
     string poorBin = binNum;
     reverse(binNum.begin(), binNum.end());
-    if (binNum == poorBin) {
+    if (binNum == poorBin && num % 2 == 0) {
         cout << "YES" << endl;
     } else {
         cout << "NO" << endl;
