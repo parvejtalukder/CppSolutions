@@ -15,6 +15,7 @@ int main() {
     pht();
     int testCase;
     cin >> testCase;
+    cin.ignore();
     while(testCase--) {
         theMachine();
     }
@@ -22,7 +23,7 @@ int main() {
 }
 
 void theMachine() {
-    string fullForm; cin.ignore();
+    string fullForm; 
     getline(cin, fullForm);
     vector <char> shortForm;
     shortForm.push_back(fullForm.at(0));
