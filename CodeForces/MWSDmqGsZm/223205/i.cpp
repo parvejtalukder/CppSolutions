@@ -21,22 +21,27 @@ int main() {
     }
     for(int i = 0; i < size2D; i++) {
         for(int j = 0; j < size2D; j++) {
-            if (i == row - 1, j == col - 1) {
+            if (j == row - 1) {
                 swap(Arr[i][row - 1], Arr[i][col - 1]);
+
             }
         }
     }
-    // for(int i = 0; i < size2D; i++) {
-    //     for(int j = 0; j < size2D; j++) {
-    //         if (i == row - 1, j == col - 1) {
-    //             swap(Arr[row - 1][j], Arr[col - 1][j]);
-    //         }
-    //     }
-    // }
-    cout << endl << endl;
     for(int i = 0; i < size2D; i++) {
         for(int j = 0; j < size2D; j++) {
-            cout << Arr[i][j] << " ";
+            if (i == row - 1) {
+                swap(Arr[row - 1][j], Arr[col - 1][j]);
+            }
+        }
+    }
+    // cout << endl << endl;
+    for(int i = 0; i < size2D; i++) {
+        for(int j = 0; j < size2D; j++) {
+            if (j != size2D - 1) {
+                cout << Arr[i][j] << " ";
+            } else {
+                cout << Arr[i][j];
+            }
         }
         cout << endl;
     }
