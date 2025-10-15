@@ -10,7 +10,7 @@ int main() {
     }
     int esy = 0; int hrd = 0;
     for(int i = 0; i < n; i++) {
-                if (nn[i] == 0) {
+            if (nn[i] == 0) {
             esy++;
         } else {
             hrd++;
