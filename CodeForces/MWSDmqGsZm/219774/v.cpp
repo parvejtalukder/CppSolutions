@@ -25,6 +25,5 @@ int main() {
     for(int i = 1; i <= runTo; i++) {
         cout << countValue[i] << endl;
     }
-
     return 0;
 }
