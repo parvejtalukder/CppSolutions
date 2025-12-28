@@ -1,4 +1,4 @@
-// https://atcoder.jp/contests/abc156/tasks/abc156_b
+// https://atcoder.jp/contests/arc088/tasks/arc088_a
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -9,20 +9,14 @@ void pht() {
     cout.tie(NULL);
 }
 
-
 int main() {
     pht();
-
-    long long n, k;
-    cin >> n >> k;
-    long long ans = 0;
-    while(n > 0) {
-        int dig = n % k;
+    long long x, y;
+    cin >> x >> y;
+    int ans = 0;
+    for(; x <= y; x*=2) {
         ans++;
-        n /= k;
     }
-
     cout << ans << "\n";
-
     return 0;
 }
