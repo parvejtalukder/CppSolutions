@@ -17,21 +17,16 @@ int main() {
         int n, k;
         cin >> n >> k;
         vector <int> arr(n);
+        int ans = -1;
         for(int i = 0; i < n; i++) {
             cin >> arr[i];
+            ans &= arr[i];
         }
-        // bool what_is = false;
-        for (int i = 0; i < n; i++) {
-            // int ans = 0;
-            for (int j = i; j < n; j++) { 
-                if ((i & j) < k) {
-                    cout << "YES" << "\n";
-                    break;
-                    // break;
-                }
-            }
+        if (ans < k) {
+            cout << "YES" << "\n";
+        } else {
+            cout << "NO" << "\n";
         }
-        cout << "NO" << "\n";
     }
     return 0;
 }
