@@ -18,17 +18,15 @@ int main() {
     cin >> n;
     arr.resize(n);
     long long sum = 0;
+    long long ans = 0;
     for(int i = 0; i<n; i++) {
         cin >> arr[i];
+        sum = (sum + arr[i]) % mod;
     }
     for(int i = 0; i < n; i++) {
-        for(int j = i; j < n; j++) {
-            if (i != j) {
-                sum += (arr[i] * arr[j]) % mod;
-                // cout << arr[i] << " " << arr[j] << "\n";
-            }
-        }
+        sum = (sum - arr[i] + mod) % mod;  
+        ans = (ans + arr[i] * sum % mod) % mod;
     }
-    cout << sum % mod << "\n";
+    cout << ans % mod << "\n";
     return 0;
 }
