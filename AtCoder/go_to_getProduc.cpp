@@ -16,9 +16,10 @@ int main() {
     int t;
     cin >> t;
     while(t--) {
-        int a, b;
+        long long a, b;
         cin >> a >> b;
-        cout << (abs(a) * abs(b)) << "\n";
+        cout << ((a + 1) / 2) * ((b + 1) / 2) + (a/2) * (b/2) << "\n";
+        // cout << (abs(a) * abs(b)) << "\n";
     }
     return 0;
 }

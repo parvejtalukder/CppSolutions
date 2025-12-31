@@ -1,5 +1,4 @@
-// https://atcoder.jp/contests/abc177/tasks/abc177_c
-
+// 
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -14,21 +13,13 @@ vector <long long> arr;
 
 int main() {
     pht();
-    int n;
-    cin >> n;
-    arr.resize(n);
-    long long sum = 0;
-    for(int i = 0; i<n; i++) {
-        cin >> arr[i];
+    int t;
+    cin >> t;
+    while(t--) {
+        int a, b;
+        cin >> a >> b;
+        cout << ((a + 1) / 2) * ((b + 1) / 2) + (a/2) * (b/2) << "\n";
+        // cout << (abs(a) * abs(b)) << "\n";
     }
-    for(int i = 0; i < n; i++) {
-        for(int j = i; j < n; j++) {
-            if (i != j) {
-                sum += (arr[i] * arr[j]) % mod;
-                // cout << arr[i] << " " << arr[j] << "\n";
-            }
-        }
-    }
-    cout << sum % mod << "\n";
     return 0;
 }
