@@ -1,4 +1,4 @@
-// https://codeforces.com/problemset/problem/1743/B
+/*https://codeforces.com/problemset/problem/2178/A*/
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -11,20 +11,23 @@ void pht() {
 
 int main() {
     pht();
-    int test_case;
-    cin >> test_case;
-    while(test_case--) {
-        int n;
-        cin >> n;
-        cout << n << " ";
-        for(int i = 1; i < n; i++ ) {
-            // cout << i << " ";
-            if (i != n - 1) {
-                cout << i << " ";
-            } else {
-                cout << i << "\n";
-            }
-        }
+    string arr;
+    cin >> arr;
+    int s = arr.size();
+    reverse(arr.begin(), arr.end());
+    int start = 0;
+    while(arr[start] == '0' && start < s) {
+        start++;
+        // cout << start << " ";
     }
+    string ann = arr.substr(start);
+    cout << ann << "\n";
+    if (ann == arr) {
+        cout << "YES" << "\n";
+    } else {
+        cout << "NO" << "\n";
+    }
+    // cout << start << "\n";
+    // cout << start << " " << arr << "\n";
     return 0;
 }
