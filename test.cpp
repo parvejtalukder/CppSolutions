@@ -9,8 +9,6 @@ void pht() {
 
 int main() {
     pht();
-    string word;
-    cin >> word;
-    tolower(word);
+    cout << sqrt(25) << "\n";
     return 0;
 }

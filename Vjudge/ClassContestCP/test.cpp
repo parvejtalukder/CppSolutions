@@ -3,14 +3,13 @@ using namespace std;
 
 void pht() {
     ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    cout.tie(NULL);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
 }
 
 int main() {
     pht();
-    string word;
-    cin >> word;
-    tolower(word);
+    string one = " '";
+    cout << char(39) << "\n";
     return 0;
 }
