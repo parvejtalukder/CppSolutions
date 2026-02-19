@@ -19,9 +19,12 @@ int main() {
     }
     for(int i = 0; i < n; i++) {
         for(int j = 0; j < n; j++) {
-            if ((arr[i] + arr[j]) == arr[i] + 1) {
+            if ((arr[i] + 1) == arr[j]) {
+                // cout << arr[i] + 1 << "\n";
                 cnt++;
+                break;
             }
+            // cout << arr[i] + arr[j] << "\n";
         }
     }
     cout << cnt << "\n";
