@@ -1,5 +1,3 @@
-//https://vjudge.net/contest/786209#problem/E
-
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -11,7 +9,6 @@ void pht() {
 
 int main() {
     pht();
-    string inp;
-    cin >> inp;
+
     return 0;
 }
