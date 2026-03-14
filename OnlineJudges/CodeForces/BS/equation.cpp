@@ -9,23 +9,23 @@ void pht() {
 
 double ans(double x) {
     return (x * x) + sqrt(x); 
-    cout << "CALLED FOR " << x;
+    // cout << "CALLED FOR " << x;
 }
  
 int main() {
     pht();
     double c;
     cin >> c;
-    double result = 0.0;
-    double l = 1.0, r = 1e10;
-    while (r - l >= 1e-6) {
-        double mid = (l + r)/2;
+    int it = 100;
+    double x = 0.0, r = 1e5;;
+    while (it--) {
+        double mid = (x + r)/2;
         if (ans(mid) < c) {
-            l = mid;
+            x = mid;
         } else {
             r = mid;
         }
     }
-    cout << fixed << setprecision(6) << result << "\n";
+    cout << fixed << setprecision(6) << x << "\n";
     return 0;
 }
