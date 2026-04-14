@@ -8,24 +8,28 @@ void pht() {
     cout.tie(0);
 }
 
-int getSum(int n) {
-    int sm = 0;
-    while(n > 0) {
-        int d = n % 10;
-        sm += d;
-        n /= 10;
-    }
-    return sm;
-}
-
 int main() {
     pht();
-    int t, n;
+    int k, d;
+    cin >> k >> d;
+    cin.ignore();
+    d++;
+    string need = "";
+    char num = '0';
+    while(d--) {
+        need += num;
+        num++;
+    }  
     int cnt = 0;
-    for(int i = 1; i <= t; i++) {
-        int k;
-        cin >> k;
-        
+    vector <string> arr;
+    while(k--) {
+        string x;
+        cin >> x;
+        if (x == need) {
+            cnt++;
+        }
+        reverse(x.begin(), x.end());
     }
+    cout << cnt << "\n";
     return 0;
 }

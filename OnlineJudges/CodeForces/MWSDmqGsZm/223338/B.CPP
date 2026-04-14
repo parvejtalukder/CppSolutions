@@ -9,21 +9,24 @@ void pht() {
 
 int main() {
     pht();
-    int n;
+    long long n;
     cin >> n;
-    int cnt = 0;
-    for(int i = 1; i * i <= n; i++) {
+    if (n <= 1) {
+        cout << "NO" << "\n";
+        return 0;
+    }
+    // int cnt = 0;
+    for(int i = 2; 1LL * i * i <= n; i++) {
         if (n % i == 0) {
-            cnt++;
-            if (i != n/i) {
-                cnt++;
-            }
+            cout << "NO" << "\n";
+            return 0;
         } 
     }
-    if (cnt == 2) {
-        cout << "YES" << "\n";
-    } else {
-        cout << "NO" << "\n";
-    }
+    cout << "YES" << "\n";
+    // if (cnt == 2) {
+    //     cout << "YES" << "\n";
+    // } else {
+    //     cout << "NO" << "\n";
+    // }
     return 0;
 }
