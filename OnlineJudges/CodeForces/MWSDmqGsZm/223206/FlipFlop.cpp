@@ -1,6 +1,7 @@
 // https://codeforces.com/problemset/problem/2209/A
 #include <bits/stdc++.h>
 using namespace std;
+#define ll long long 
 
 void pht() {
     ios_base::sync_with_stdio(false);
@@ -20,12 +21,17 @@ int main() {
             cin >> arr[i];
         }
         sort(arr.begin(), arr.end());
+        int cnt = 0;
         for(int i = 0; i < n; i++) {
             if (arr[i] <= c) {
+                cnt++;
                 c += arr[i];
+            } else {
+                break;
             }
         }
-        cout << c << "\n";
+        ll flip_flop = min(k, cnt);
+        cout << c + flip_flop << "\n";
 
     }
     return 0;

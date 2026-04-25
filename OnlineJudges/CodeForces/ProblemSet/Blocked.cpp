@@ -15,19 +15,20 @@ int main() {
     while(t_case--) {
         int n;
         cin >> n;
-        vector <int> arr;
-        arr.push_back(0);
+        set<int> arr;
         for(int i = 0; i < n; i++) {
-            int x; cin >> x;
-            arr.push_back(x);
+            int x;
+            cin >> x;
+            arr.insert(x);
         }
-        sort(arr.begin(), arr.end());
-        for(int i = 1; i < n; i++) {
-            if (i % 2 == 0) {
-                cout << arr[i + 1] << " ";
-            } else {
-                cout << arr[i - 1] << " ";
-            }
+
+        if(arr.size() != n) {
+            cout << -1 << "\n";
+        } else {
+            vector<int> v(arr.begin(), arr.end());
+            sort(v.rbegin(), v.rend()); 
+            for(int x: v) cout << x << " ";
+            cout << "\n";
         }
     }
     return 0;
