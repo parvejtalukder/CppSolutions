@@ -1,37 +1,30 @@
-//https://vjudge.net/contest/790915#problem/C
-
 #include <bits/stdc++.h>
 using namespace std;
 
-void pht() {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    cout.tie(NULL);
+vector <int> arr; 
+int f = 0;
+
+int bs(int left, int right) {
+
+    if (left > right) return -1;
+    
+    int mid = (left + right)/2;
+    if (arr[mid] == f) {
+        return mid;
+    } else if (f < arr[mid]) {
+        bs(left, mid - 1);
+    }
+    return bs(mid + 1, right);
 }
 
 int main() {
-    pht();
-    long long n, c;
-    cin >> n >> c;
-    long long arr[n];
-    for(long long i = 0; i < n; i++) {
+    int s;
+    cin >> s >> f;
+    arr.resize(s);
+    for(int i = 0; i < s; i++) {
         cin >> arr[i];
     }
-    for(long long i = 0; i < n; i++) {
-        for(long long j = 0; j < n - i - 1; j++) {
-            if (arr[j] > arr[j + 1]) {
-                swap(arr[j], arr[j + 1]);
-            }
-        }
-    }
-    long long cnt = 0;
-    long long from = arr[0];
-    for(long long i = 0; i < n; i++) {
-        if ((arr[i] - from) >= c) {
-            cnt++;
-            from = arr[i];
-        }
-    }
-    cout << cnt << "\n";
+    sort(arr.begin(), arr.end());
+    cout << bs(0, s - 1) << "\n";
     return 0;
 }
