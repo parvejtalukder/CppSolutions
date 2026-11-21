@@ -1,32 +1,26 @@
-// https://codeforces.com/problemset/problem/2209/A
+// https://codeforces.com/group/MWSDmqGsZm/contest/223206/problem/E
 #include <bits/stdc++.h>
 using namespace std;
 
 void pht() {
-    ios_base::sync_with_stdio(false);
-    cin.tie(nullptr);
-    cout.tie(nullptr); 
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
 }
 
 int main() {
     pht();
-    int t_case;
-    cin >> t_case;
-    while(t_case--) {
-        int n, c, k;
-        cin >> n >> c >> k;
-        vector <int> arr(n);
-        for(int i = 0; i < n; i++) {
-            cin >> arr[i];
+    long long numberOfRoom;
+    cin >> numberOfRoom;
+    long long roomAvailable = 0;
+    vector <int> PeopleCanLive(numberOfRoom);
+    vector <int> PeopleAreOnLive(numberOfRoom);
+    for(long long i = 1; i <= numberOfRoom; i++) {
+        cin >> PeopleCanLive[i] >> PeopleAreOnLive[i];
+        if ((PeopleAreOnLive[i] - PeopleCanLive[i]) >= 2) {
+            roomAvailable++;
         }
-        sort(arr.begin(), arr.end());
-        for(int i = 0; i < n; i++) {
-            if (arr[i] <= c) {
-                c += arr[i];
-            }
-        }
-        cout << c << "\n";
-
     }
+    cout << roomAvailable << endl;
     return 0;
 }

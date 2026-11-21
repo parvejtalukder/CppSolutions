@@ -1,0 +1,12 @@
+# Code Runner temporary files
+**/tempCodeRunnerFile.*
+
+# Compiled files
+*.exe
+*.out
+*.o
+*.obj
+
+# Debug files
+*.pdb
+*.ilk
